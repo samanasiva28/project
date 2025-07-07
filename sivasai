@@ -1,37 +1,16 @@
 pipeline {
     agent any
 
+    environment {
+        name = "sivasai"
+        age = "20"
+    }
+
     stages {
-        stage('Hello') {
+        stage("Build") {
             steps {
-                echo 'Hello World'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Thanks for coming here'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running test cases...'
-                echo 'All tests passed!'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
-                echo 'Deployment successful!'
-            }
-        }
-
-        stage('Cleanup') {
-            steps {
-                echo 'Cleaning up workspace...'
-                echo 'Cleanup complete!'
+                echo "My name is ${name}"
+                echo "My age is ${age}"
             }
         }
     }
