@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo "My name is ${name}"
                 echo "My age is ${age}"
-                echo "My git-repo branch name is ${env.BUILD_ID}"
+                echo "My git-repo branch name is ${env.JOB_NAME}"
             }
         }
     }
